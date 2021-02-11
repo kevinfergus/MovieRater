@@ -77,7 +77,6 @@ function MovieInfo(props) {
 		const movieDocRef = db.collection("ratings").doc(title);
 		const rating = e.target.value
 			movieDocRef.get().then(function(doc) {
-			console.log("doc in get", doc.exists)
 			if (doc.exists) {
 				updateDoc(rating, movieDocRef)
 			} else {
