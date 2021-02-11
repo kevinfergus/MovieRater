@@ -52,8 +52,6 @@ function MovieInfo(props) {
 					  if(rating==='thumbsUP') {
 						  newRating = movieDoc.data().thumbsUP + 1	
 
-						  console.log(newRating)
-
 						  transaction.update(movieDocRef, { thumbsUP: newRating });
 						  return newRating
 					  }
